@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(34, 34, 34, 0.7), rgba(2, 2, 2, 0.9)), url(images/header-image.png);
+  background-position: center;
+  background-size: cover;
+  padding: 10px 8%;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.logo {
+  width: 140px;
+  cursor: pointer;
+}
+
+.header-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  align-items: center;
+}
+
+select {
+  padding: 5px 10px;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+select option {
+  color: #000;
+}
+
+.header-details button {
+  padding: 6px 4px;
+  cursor: pointer;
+  background: red;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+  outline: none;
+}
+
+.header-details button:hover {
+  background: rgb(193, 16, 16);
+}
+
+.header-title {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.header-title .title h1 {
+  font-size: 55px;
+  letter-spacing: 2px;
+  line-height: 60px;
+}
+
+.header-title .title h3 {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 16px 0;
+}
+
+.inputfield {
+  max-width: 600px;
+  width: 100%;
+  margin: 10px auto;
+  display: flex;
+  margin: 30px auto;
+}
+
+.inputfield input {
+  flex: 1;
+  padding: 13px 12px;
+  font-size: 18px;
+  border: 1px solid #fff;
+  outline: none;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.inputfield button {
+  font-size: 15px;
+  padding: 10px 23px;
+  border: none;
+  outline: none;
+  background: red;
+  color: #fff;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  cursor: pointer;
+}
+
+.inputfield button:hover {
+  background: rgb(193, 16, 16);
+}
+
+main {
+  width: 100%;
+  padding: 5% 10%;
+  text-align: center;
+}
+
+main .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 60px 0;
+}
+
+main .row .col {
+  text-align: left;
+}
+
+main .row .col h1 {
+  font-size: 50px;
+  margin: 20px 0;
+}
+
+main .row .col p {
+  font-size: 20px;
+}
+
+main .row .col img {
+  width: 400px;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+main .row .col img:hover {
+  transform: scale(1.02);
+}
+
+.questions {
+  max-width: 550px;
+  margin: 10px auto;
+  text-align: left;
+  padding: 0 10px;
+}
+
+.questions h1 {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.questions ul {
+  list-style: none;
+}
+
+.questions ul li .question {
+  background: #303030;
+  padding: 12px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+
+span {
+  cursor: pointer;
+}
+
+.questions ul li .answer {
+  background: #303030;
+  font-size: 16px;
+  margin-bottom: 5px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+  padding: 0 20px;
+}
+
+.questions ul li .answer.active {
+  max-height: 500px;
+  opacity: 1;
+  padding: 12px 20px;
+}
+
+.footer {
+  width: 100%;
+  padding: 2% 10%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+footer hr {
+  height: 2px;
+  background: gray;
+}
+
+@media only screen and (max-width: 600px) {
+  body{
+    text-align: center;
+  }
+  .logo {
+    width: 100px;
+  }
+
+  nav button {
+    padding: 5px 10px;
+  }
+  .header-title .title h1{
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
+}
